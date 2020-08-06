@@ -71,6 +71,9 @@ class InvalidUsage(Exception):
         super(InvalidUsage, self).__init__()
         self.message = message
 
+@app.route('/')
+def homepage():
+    return "Homepage - Python API is up and running"
 
 @app.route("/firstQuestion", methods=['POST'])
 def question_first():
